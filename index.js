@@ -6,7 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 4000
 
 const corsOptions ={
-    origin: "https://peaceful-squirrel-a73a86.netlify.app"
+    origin: "https://peaceful-squirrel-a73a86.netlify.app",
+    credentials: true,
 }
 
 app.use(cors(corsOptions));
