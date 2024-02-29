@@ -1,0 +1,33 @@
+
+<html>
+  <head>
+    <title>pywebcanvas-example</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        - paths:
+              - ./world.py
+      </py-env>
+    <style>
+  </style>
+  </head>
+  <body>
+    <div>
+      <canvas id="Canvas"></canvas>
+  </div>
+  <script>
+    name = "Jeff" //A JS variable
+    // Define a JS Function
+    function addTwoNumbers(x, y){
+        return x + y;
+    }
+</script>
+<py-script>
+
+    # Import and use JS function in Python
+    from js import name, addTwoNumbers, console
+    console.log("Hello " + name + ".Adding 1 and 2 in Javascript: " + str(addTwoNumbers(1, 2)))
+</py-script>
+   
+  </body>
+</html>
