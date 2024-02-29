@@ -5,12 +5,9 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 4000
 
-const corsOptions ={
-    origin: "https://peaceful-squirrel-a73a86.netlify.app",
-    credentials: true,
-}
-
-app.use(cors(corsOptions));
+app.use(cors({
+    origin: 'https://peaceful-squirrel-a73a86.netlify.app' // 특정 출처 허용
+  }));
 app.use(express.json());
 app.use(express.static("public"));
 
